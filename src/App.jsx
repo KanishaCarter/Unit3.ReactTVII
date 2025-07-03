@@ -11,6 +11,9 @@
 12. `<ShowSelection>` and `<ShowDetails>` are provided the correct props. You just wrote these components, 
 so you should know what props they expect!
 */
+import {tvShows} from './shows/data.js'
+import {ShowSelection} from './shows/ShowSelection.jsx'
+import {ShowSelection} from './shows/ShowDetails.jsx'
 
 export default function App() {
  return (
