@@ -10,5 +10,9 @@ with the name of the show as both the key and the text of the anchor.
 
 /** A navbar that allows users to choose between a list of shows */
 export default function ShowSelection(shows, setSelectedShow) {
-  return <nav className="shows"></nav>;
+  return <nav className="shows">
+    {shows.map((show) => (
+      <a key={show.name} class="show" onClick={()=>setSelectedShow(show)}>{show.name}</a>
+    ))}
+  </nav>;
 }
