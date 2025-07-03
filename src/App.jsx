@@ -12,22 +12,13 @@
 so you should know what props they expect!
 */
 
-import {useState} from 'react'
-import {tvShows} from './shows/data.js' 
-import {ShowSelection} from './shows/ShowSelection.jsx'
-import {ShowDetails} from './shows/ShowDetails.jsx'
-
 export default function App() {
-  const {shows, setShows} = useState(tvShows);
-
-  return (
+ return (
     <>
       <header>
         <p>React TV</p>
       </header>
       <main>
-        <>
-        </>
       </main>
     </>
   );

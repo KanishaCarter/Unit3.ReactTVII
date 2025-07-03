@@ -1,12 +1,7 @@
 import "./episodes.css";
 
 /** A list of episode names that allows the user to select an episode */
-export default function EpisodeList({
-  name,
-  episodes,
-  selectedEpisode,
-  setSelectedEpisode,
-}) {
+export default function EpisodeList({name, episodes, selectedEpisode, setSelectedEpisode,}) {
   return (
     <section className="episodes">
       <h2>{name}</h2>

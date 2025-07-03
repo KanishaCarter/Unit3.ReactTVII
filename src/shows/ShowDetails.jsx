@@ -9,17 +9,7 @@ import "./shows.css";
 components to figure out what props they expect!
 */
 
-import {EpisodeList} from './episodes/EpisodeList.jsx'
-import {EpisodeDetails} from './episodes/EpisodeDetails.jsx'
-
 /** Allows users to browse through the episodes of the given show */
-// Inserted episode as a prop
-export default function ShowDetails({ show }) {
-  // Store state variables
-  const {show, setShow} = useState(null);
-
-  return <div className="show-details">
-    <>
-    </>
-  </div>;
+export default function ShowDetails() {
+  return <div className="show-details"></div>
 }
