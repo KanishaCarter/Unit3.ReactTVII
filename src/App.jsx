@@ -1,27 +1,31 @@
 /**
- * React TV is an web streaming platform that allows users to browse
+ * React TV is a web streaming platform that allows users to browse
  * through the episodes of a variety of different shows.
  */
 
-/*
-9. `<App>` imports the array from `data` into a state variable. Look very carefully at the
-   location of `data.js`! It is not a sibling of `App.jsx`.
-10. `<App>` keeps the selected show in a state variable.
-11. `<App>` renders `<ShowSelection>` within the `<header>` and `<ShowDetails>` within the `<main>`.
-12. `<ShowSelection>` and `<ShowDetails>` are provided the correct props. You just wrote these components, 
-so you should know what props they expect!
-*/
-import {tvShows} from './shows/data.js'
-import {ShowSelection} from './shows/ShowSelection.jsx'
-import {ShowDetails} from './shows/ShowDetails.jsx'
+
+import { useState } from 'react';
+/*9. `<App>` imports the array from `data` into a state variable.*/
+import { tvShows } from './data';
+import ShowSelection from './shows/ShowSelection';
+import ShowDetails from './shows/ShowDetails';
 
 export default function App() {
- return (
+  /*10. `<App>` keeps the selected show in a state variable.*/
+  const [selectedShow, setSelectedShow] = useState(null);
+
+  return (
     <>
       <header>
+        {/* 11. `<App>` renders `<ShowSelection>` within the `<header>`*/}
         <p>React TV</p>
+        <ShowSelection shows={tvShows} setSelectedShow={setSelectedShow}/>
       </header>
+
       <main>
+        {/* 11. `<App>` renders `<ShowDetails>` within the `<main>`
+        12. `<ShowSelection>` and `<ShowDetails>` are provided the correct props.*/}
+        <ShowDetails show={selectedShow} />
       </main>
     </>
   );

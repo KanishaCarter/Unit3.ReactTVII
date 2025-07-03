@@ -1,6 +1,6 @@
 import "./shows.css";
-import {EpisodeList} from './episodes/EpisodeList.jsx'
-import {EpisodeDetails} from './episodes/EpisodeDetails.jsx'
+import {EpisodeList} from './EpisodeList'
+import {EpisodeDetails} from './EpisodeDetails'
 
 /** Allows users to browse through 
  * the episodes of the given show */

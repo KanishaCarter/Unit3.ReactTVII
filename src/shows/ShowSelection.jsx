@@ -1,5 +1,5 @@
 import "./shows.css";
-import {EpisodeList} from './episodes/EpisodeList.jsx'
+import {EpisodeList} from './EpisodeList.jsx'
 
 
 /** A navbar that allows users to choose between a list of shows */
